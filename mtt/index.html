@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Secret Society - Meet The Team</title>
+  <link href="https://secret-society.soulcin.repl.co/style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://secret-society.soulcin.repl.co/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/fluid-canvas@latest"></script>
+</head>
+
+<body style="--bgc: black;" class="w3-animate-opactiy">
+  <nav class="w3-bar">
+    <div class="left-bar-elements w3-left w3-rightbar w3-border-black">
+      <a href="/" class='w3-button imgNBB w3-bar-item'><img
+          src="https://media.discordapp.net/attachments/1122943896142491679/1122945436265762867/IMG_3432.png?width=1872&height=1872"
+          width="50" height="50" class="w3-circle" class="navIcons"></a>
+      <a href="/mtt/" class='w3-button imgNBB w3-bar-item'><img
+          src="https://media.discordapp.net/attachments/1122943896142491679/1143039848849088532/people.png?width=899&height=899"
+          width="50" height="50" class="navIcons" </a>
+        <a href="/gallery/" class='w3-button imgNBB w3-bar-item'><img
+            src="https://cdn.discordapp.com/attachments/1122943896142491679/1143039848391905381/galler.png" width="50"
+            height="50" class="navIcons"></a>
+    </div>
+  </nav>
+  <header>
+    <div class="container">
+      <img
+        src="https://media.discordapp.net/attachments/1122943896142491679/1123463539504455720/nvuWOeh.jpg?width=1920&height=1080"
+        class="headerImg">
+      <div class="centered">Meet The Team</div>
+    </div>
+  </header>
+  <center>
+    <div id="mttCards">
+      <div class="mttCard">
+        <img
+          src="https://cdn.discordapp.com/attachments/1122943896142491679/1124928959327514674/blank-profile-picture-973460_1280.png"
+          class="mttcImg">
+        <h1>Fawn</h1>
+        <p>What would you do if there was nowhere in the world for you to belong?<br>
+          I struggled with this all my life, until I finally decided that if I could not be accepted in any
+          community,<br>
+          then I would make my own. I invite you to join, express yourself, and see what happens!</p>
+      </div>
+      <div class="mttCard">
+        <img
+          src="https://cdn.discordapp.com/attachments/1122943896142491679/1124929257659957320/panel-821756234-image-98451c02-1134-45fb-8c2f-6f6331ca0c82.png"
+          class="mttcImg">
+        <h1>Kioku</h1>
+        <p>Sometimes it's nice to just take a break and relax.<br>I'm Kioku, and if you're looking to chill and hangout,
+          come find me! I enjoy playing games and meeting new people. I'm a Content Creator and Admin for Secret
+          Society.</p>
+      </div>
+      <div class="mttCard">
+        <img
+          src="https://cdn.discordapp.com/attachments/1122943896142491679/1124929608542863400/panel-821756234-image-89480cda-5708-4eaf-83ec-ab4faec06558.png"
+          class="mttcImg">
+        <h1>Soft Tofu</h1>
+        <p>The alignment of the stars and the frequencies of my crystals have foretold your arrival.<br>
+          Hi! I tell people stories and ramble for hours on end to help people struggling with life problems. If this
+          resonates with you, look no further.</p>
+      </div>
+    </div>
+    <footer>
+      <canvas id="renderSurface"></canvas>
+    </footer>
+  </center>
+  <script>
+    const canvas = document.getElementById('renderSurface');
+    const myFluid = new Fluid(canvas);
+
+    myFluid.activate();
+  </script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+    integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+    integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://secret-society.soulcin.repl.co/script.js"></script>
+  <script>
+    gsap.to("nav", {
+      padding: "0 75px",
+      height: '100px',
+      background: 'rgba(0, 0, 0, 0.35)',
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: "p",
+        start: "top 1%",
+        end: "bottom 80%",
+        toggleActions: "play none none reverse",
+      },
+    });
+  </script>
+</body>
+
+</html>

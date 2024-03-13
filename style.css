@@ -151,7 +151,7 @@ footer {
   margin-top: 15px;
 }
 
-.galleryImg:active > img {
+.galleryImg > img:active {
   width: 70%;
 }
 
